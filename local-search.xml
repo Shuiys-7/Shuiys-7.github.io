@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>FastAPI</title>
+    <link href="/2025/07/10/FastAPI/"/>
+    <url>/2025/07/10/FastAPI/</url>
+    
+    <content type="html"><![CDATA[<h1 id="FastAPI"><a href="#FastAPI" class="headerlink" title="FastAPI"></a>FastAPI</h1><p>FastAPI是一个用于构建API的现代、快速的web框架，使用Python语言，我接触到FastAPI是由于网上冲浪的缘故。</p><p>我对Java的后端不太感兴趣，所以一直想找别的语言做后端开发。</p><p>在机缘巧合下了解了FastAPI，之前是用Django跟着视频教学敲了几个项目，对于Django是一知半解，并不太熟练</p><p><a href="https://fastapi.tiangolo.com/zh/">FastAPI</a>的官方网站有很详细的讲解，接下来我将进行一些简单的演示</p><h2 id="安装FastAPI"><a href="#安装FastAPI" class="headerlink" title="安装FastAPI"></a>安装FastAPI</h2><p>我个人习惯在conda或在cmd里安装库都是使用pip</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">pip <span class="hljs-keyword">install</span> fastapi<br></code></pre></td></tr></table></figure><h2 id="导包设置"><a href="#导包设置" class="headerlink" title="导包设置"></a>导包设置</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> fastapi <span class="hljs-keyword">import</span> FastAPI<br></code></pre></td></tr></table></figure><h2 id="代码demo"><a href="#代码demo" class="headerlink" title="代码demo"></a>代码demo</h2><p>在fastapi中我认为最核心的就是两个语句，前面的app来源则是使用FastAPI</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">app = FastAPI()<br><span class="hljs-meta">@app.get()</span><br><span class="hljs-meta">@app.put()</span><br></code></pre></td></tr></table></figure><p>使用这两个语句进行地址映射，以此来编写后续的功能代码</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> fastapi <span class="hljs-keyword">import</span> FastAPI<br>app = FastAPI()<br><br><span class="hljs-meta">@app.get(<span class="hljs-params"><span class="hljs-string">&quot;/&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">testGet</span>():<br><span class="hljs-keyword">return</span> &#123;<span class="hljs-string">&quot;hello&quot;</span> : <span class="hljs-string">&quot;shuiys&quot;</span>&#125; <br><br><span class="hljs-meta">@app.put(<span class="hljs-params"><span class="hljs-string">&quot;/test&quot;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">testPut</span>():<br><span class="hljs-keyword">return</span> &#123;<span class="hljs-string">&quot;shuiys&quot;</span> : <span class="hljs-string">&quot;hello&quot;</span>&#125;<br></code></pre></td></tr></table></figure><p>编写完简单的demo后就可以启动了</p><p>启动使用的是uvicorn</p><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">uvicorn &#123;文件名字&#125;:app <span class="hljs-comment">-- reload</span><br></code></pre></td></tr></table></figure><p>接下来就可以在规定的路径下看到编写的信息</p><p>首先是默认的”&#x2F;“</p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250710201940352.png" alt="image-20250710201940352"></p><p>然后put请求可以使用curl来进行访问</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl.exe -X PUT http://localhost:8000/test<br></code></pre></td></tr></table></figure><p>结果如下</p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250710202115346.png" alt="image-20250710202115346"></p><p>对于FastAPI的初步（简单）使用就也是这些了。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Python</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>test</title>
     <link href="/2025/07/05/test/"/>
     <url>/2025/07/05/test/</url>
