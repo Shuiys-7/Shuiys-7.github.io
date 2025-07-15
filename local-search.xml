@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>Django</title>
+    <link href="/2025/07/16/Django/"/>
+    <url>/2025/07/16/Django/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Django"><a href="#Django" class="headerlink" title="Django"></a>Django</h1><h2 id="1-新建项目和一些配置"><a href="#1-新建项目和一些配置" class="headerlink" title="1. 新建项目和一些配置"></a>1. 新建项目和一些配置</h2><p>对于Django来讲，选择pycharm进行编写，在新建项目时有具体的可视化操作</p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250716023122573.png" alt="image-20250716023122573"></p><p>在设置好各种基础配置后可以看到项目的初始情况</p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250716023306569.png" alt="image-20250716023306569"></p><p>会自动生成一个项目名称文件夹，里面包含一些基础文件，其中我们需要修改的是settings和urls。</p><p>在每次有一个新模块（类&#x2F;app），都需要在settings的INSTALLED_APPS中挂载</p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250716023838689.png" alt="image-20250716023838689"></p><p>上面三个是我自己新建的内容，rest_framework是引用的django的rest_framework来进行开发，所以也需要添加，剩下的就是初始生成的。</p><p>django默认的数据库sqlite，可以更改设置改为链接其他数据库</p><p>默认：</p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250716024036157.png" alt="image-20250716024036157"></p><p>MySQL：</p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250716024125894.png" alt="image-20250716024125894"></p><p>NAME是要链接的表名，USER和PASSWORD就是数据库用户名称和密码。</p><p>对于urls.py文件，在Django启动后，可以访问的网址都要在urls的urlpatterns进行“报备”</p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250716024513424.png" alt="image-20250716024513424"></p><p>例如现在我可以访问admin&#x2F; 和 api.urls 里定义的地址</p><h2 id="2-数据库"><a href="#2-数据库" class="headerlink" title="2. 数据库"></a>2. 数据库</h2><p>对于django来说，默认的数据库是不需要外部链接的，新建表的方式则是通过编写模型类来新建表</p><p>首先是在根项目创建一个新的app</p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250716025157636.png" alt="image-20250716025157636"></p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250716025216602.png" alt="image-20250716025216602"></p><p>会自动生成一些基础文件，在models里编写类（表结构）</p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250716025301352.png" alt="image-20250716025301352"></p><p>编写完成后在根项目控制台输入</p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250716025344686.png" alt="image-20250716025344686"></p><p><img src="https://raw.githubusercontent.com/Shuiys-7/Picgo/main/img/image-20250716025351035.png" alt="image-20250716025351035"></p><p>这样就会自动生成对应的表在数据库中，在django中推荐使用这种方式建表，而不是直接在数据库中建表（这涉及到一些django的深度知识，我才学尚浅）。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>python&#92;Django</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>FastAPI</title>
     <link href="/2025/07/10/FastAPI/"/>
     <url>/2025/07/10/FastAPI/</url>
@@ -14,7 +33,7 @@
     
     <tags>
       
-      <tag>Python</tag>
+      <tag>Python&#92;FastAPI</tag>
       
     </tags>
     
